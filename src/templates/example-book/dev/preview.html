@@ -9,7 +9,7 @@
   </style>
 </head>
 <body>
-  <iframe id="pdfFrame" src="/pdf/book.pdf"></iframe>
+  <iframe id="pdfFrame" src="/book.pdf"></iframe>
   <script>
     const iframe = document.getElementById("pdfFrame");
     const ws     = new WebSocket(`ws://${location.host}`);
@@ -36,7 +36,7 @@
         pos.y = win.scrollY;
       } catch (e) {}
       // Reload PDF
-      iframe.src = `/pdf/book.pdf?t=${Date.now()}`;
+      iframe.src = `/book.pdf?t=${Date.now()}`;
     };
 
     // When the iframe finishes loading, restore scroll and re-watch
